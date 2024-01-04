@@ -69,6 +69,13 @@ Make a Livewire component you want to show as a modal. The view for this compone
 </div>
  
 ```
+### To call from a normal blade view
+
+```html
+<button type="button" onclick="Livewire.dispatch('showModal', {data: {'alias' : 'modals.example'}})">
+                            Click me to open modal
+                        </button>
+```
 
 ### Showing Modals
 

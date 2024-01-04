@@ -20,7 +20,7 @@ class Modals extends Component
     {
         
         $this->alias = $data['alias'];
-        $this->params = $data['params'];
+        $this->params = $data['params'] ?? [];
         $this->activemodal = rand();
         $this->dispatch('showBootstrapModal');
     }

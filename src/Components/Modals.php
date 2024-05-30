@@ -10,6 +10,8 @@ class Modals extends Component
 {
     public $alias;
     public $params = [];
+    public $backdrop;
+    public $message;
     public $activemodal;
     public function render()
     {
@@ -21,8 +23,10 @@ class Modals extends Component
         
         $this->alias = $data['alias'];
         $this->params = $data['params'] ?? [];
+        $this->backdrop = $data['backdrop'] ?? '';
+        $this->message = $data['message'] ?? '';
         $this->activemodal = rand();
-        $this->dispatch('showBootstrapModal');
+        $this->dispatch('showBootstrapModal',backdrop:$this->backdrop,message:$this->message);
     }
     #[On('resetModal')]
     public function resetModal()

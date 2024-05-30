@@ -95,10 +95,11 @@ Pass parameters to the component `mount` method after the alias:
 
 ```html
 <div>
-    <button type="button"wire:click="$dispatch('showModal', {data: {'alias' : 'modals.example','params' :{'name':'test'}}})">
+    <button type="button"wire:click="$dispatch('showModal', {data: {'alias' : 'modals.example','params' :{'name':'test'},'backdrop':'static',message:'Are you sure?'}})">
 Click me
     </button>
 </div>
+- Note 'backdrop':'static',message:'Are you sure?' are optional 
 
 ```
 
